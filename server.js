@@ -1,11 +1,12 @@
 //modules
 const express = require("express");
+const PORT = process.env.PORT || 3000 ;
+
 const path = require("path");
 const fs = require("fs");
 var notesDB = require("./db/db.json");
 
 const app = express();
-const PORT = process.env.PORT || 3000 ;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,4 +38,4 @@ app.delete("/api/notes/:id", (req, res) => {
   res.json(notesDB);
 })
 
-app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
+app.listen(PORT, () => console.log(`App server now on PORT ${PORT}!`));
