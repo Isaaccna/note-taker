@@ -29,10 +29,10 @@ app.post("/api/notes", (req, res) => {
   res.json(notesDB);
 })
 
-app.delete("/api/notes/:id", (req, res) => {
-  const id = req.params.id;
+app.delete("/api/notes/:title", (req, res) => {
+  const id = req.params.title;
 
-  notesDB = notesDB.filter(notes => notes.id != id);
+  notesDB = notesDB.filter(notes => notes.title != title);
 
   fs.writeFileSync("./db/db.json", JSON.stringify(notesDB));
   res.json(notesDB);
