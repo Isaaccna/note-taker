@@ -33,3 +33,4 @@ THEN I am presented with empty fields to enter a new note title and the note’s
 [Heroku](http://blooming-journey-02910.herokuapp.com/notes)
 
 ## Usage
+[Walkthrough](https://watch.screencastify.com/v/JRCTNtilrXNuN3tbzg28)
